@@ -51,7 +51,7 @@ public class BoardController {
 		List<MenuDTO> menuList = menuMapper.getMenuList();
 		
 		// idx 글의 조회수를 1 증가해야한다
-		boardMapper.incHit( boardDto );
+		boardMapper.incHit( boardDto );  
 		
 		// idx 로 조회한 게시글
 		BoardDto board = boardMapper.getBoard(boardDto);
@@ -62,7 +62,7 @@ public class BoardController {
 		mv.setViewName("board/view");
 		mv.addObject("menuList", menuList );
 		mv.addObject("board", board);
-		
+		 
 		return mv;
 	}
 
