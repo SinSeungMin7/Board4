@@ -15,7 +15,7 @@ namespace="com.green.menus.mapper.MenuMapper" : interface 위치
 	<select id="getMenuList"
 	        resultType="com.green.menus.dto.MenuDTO">
 			
-	SELECT     MENU_ID, MENu_NAME, MENU_SEQ
+	SELECT     MENU_ID, MENU_NAME, MENU_SEQ
 	 FROM      MENUS
 	 ORDER BY  MENU_SEQ ASC
 	 	
