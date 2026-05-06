@@ -33,7 +33,7 @@ public class BoardController {
 		List<MenuDTO>  menuList  =  menuMapper.getMenuList();
 		log.info("menuList:" + menuList);
 				
-		// 게시물 목록 조회 : list.jsp가 사용할 부분
+		// 게시물 목록 조회 : list.jsp가 사용할 부분 (menu_id=MENU01)
 		List<BoardDto>  boardList  =  boardMapper.getBoardList( menuDto );		
 		log.error("boardList:" + boardList);
 		

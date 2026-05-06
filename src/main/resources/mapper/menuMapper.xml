@@ -28,7 +28,7 @@ namespace="com.green.menus.mapper.MenuMapper" : interface 위치
 	 FROM      MENUS
 	 WHERE     MENU_ID  =  #{ menu_id }
 	
-	</select>
+	</select> 
 	
 	<!-- 메뉴 추가 -->
 	<insert  id="insertMenu">
