@@ -12,7 +12,11 @@ public interface BoardMapper {
 
 	List<BoardDto> getBoardList(MenuDTO menuDto);
 
-	List<BoardDto> getBoardList2(String menu_id);
+	BoardDto getBoard(BoardDto boardDto);
+
+	void incHit(BoardDto boardDto);
+
+
 	
 	
 }
