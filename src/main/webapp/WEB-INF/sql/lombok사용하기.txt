@@ -13,13 +13,13 @@ Lombok -> Dto의 상성자, Getter/Setter, ToString 자동으로 생성해준다
   				...
   				-javaagent:D:\dev\sts-5.0.1.RELEASE\lombok.jar 라인을 추가했다
   				
-2번 방법 - 에러가 적음 
+2번 방법 - 에러가 적음    
 	https://projectlombok.org/setup/eclipse	
 	
 	SpringToolsForEclipse.exe -> Help 메뉴
 	 -> Install New Software
-	    https://projectlombok.org/p2 
+	    https://projectlombok.org/p2  
 	    아래나오는 체크  
-	    Trust Artifact 모두체크하고 Finish 클릭
+	    Trust Artifact 모두체크하고 Finish 클릭 
 	    -> Restart 버튼클릭 
 	   
