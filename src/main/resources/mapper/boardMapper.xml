@@ -29,7 +29,7 @@
 		   TITLE,
 		   CONTENT,
 		   WRITER,
-		   REGDATE,
+		   TO_CHAR(REGDATE, 'YYYY-MM-DD HH24:MI:SS') REGDATE,
 		   HIT
 	FROM   BOARD
 	WHERE  IDX = #{ idx }

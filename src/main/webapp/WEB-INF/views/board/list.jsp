@@ -10,7 +10,7 @@
 <title>Insert title here</title>
 <link rel="shortcut icon" href="/img/favicon2.png" type="image/x-icon">
 <link href="/css/common.css" rel="stylesheet" />
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <style>
    table { width:100%;  }
    td {
@@ -43,14 +43,16 @@
    }
 </style>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
 	<main>
-	  <%@include file="/WEB-INF/include/menus.jsp" %> 
+	  <%@include file="/WEB-INF/include/menus.jsp" %> <!-- jsp를  가져오는명령 -->
 	
 	  <h2>게시물 목록</h2>
-	  <table class="list">
+	  <table id="list" class="table table-dark table-hover"> 
 	    <tr>
 	      <td>번호</td>
 	      <td>제목</td>
@@ -65,7 +67,7 @@
 	      </td>
 	    </tr>
 	    
-	    <c:forEach  var="board"  items="${ boardList }">
+	    <c:forEach  var="board"  items="${ boardList }"> <!-- C로 시작하는 foreach를 쓰겟다 이것을 쓰면 % for문 쓰지않아도 쓸수있다   -->
 	    <tr>
 	      <td> ${ board.idx      }  </td>    <!-- menu.getMenu_id() -->
 	      <td class= "title"> 

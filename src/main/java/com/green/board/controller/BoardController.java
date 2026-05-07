@@ -38,7 +38,7 @@ public class BoardController {
 		log.error("boardList:" + boardList);
 		
 		ModelAndView  mv  =  new  ModelAndView();
-		mv.setViewName("board/list");
+		mv.setViewName("board/list"); // /WEB-INF/views/board/list.jsp
 		mv.addObject("menuList",  menuList);
 		mv.addObject("boardList", boardList);
 		return  mv;
@@ -64,6 +64,13 @@ public class BoardController {
 		mv.addObject("board", board);
 		 
 		return mv;
+	}
+	
+	// http://localhost:8080/Board/WriteForm
+	@RequestMapping("/WriteForm")
+	public ModelAndView writeForm(BoardDto boardDto) {
+		
+		return;
 	}
 
 }

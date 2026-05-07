@@ -13,7 +13,7 @@ Lombok -> Dto의 상성자, Getter/Setter, ToString 자동으로 생성해준다
   				...
   				-javaagent:D:\dev\sts-5.0.1.RELEASE\lombok.jar 라인을 추가했다
   				
-2번 방법 - 에러가 적음    
+2번 방법 - 에러가 적음     
 	https://projectlombok.org/setup/eclipse	
 	
 	SpringToolsForEclipse.exe -> Help 메뉴
@@ -22,4 +22,57 @@ Lombok -> Dto의 상성자, Getter/Setter, ToString 자동으로 생성해준다
 	    아래나오는 체크  
 	    Trust Artifact 모두체크하고 Finish 클릭 
 	    -> Restart 버튼클릭 
+	   
+사용하려면
+build.gradle 에 depencies 를 추가 
+dependencies {
+ ...
+   // lombok
+      compileOnly 'org.projectlombok:lombok'
+      annotationProcessor 'org.projectlombok:lombok'
+      ...
+}
+
+Board Dto.java
+
+package com.green.board.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+// @Data  // Getter/setter/toString/GashCodem equals 재정의, 기본생성자 BoardDto()
+// @Data - JPA 사용시 주의가 필요 toString() -> 문제로
+@Getter
+@Setter
+@ToString
+@NoArgsConstructor  // 기본생성자
+@AllArgsConstructor // 모든인자 생성자
+public class BoardDto {
+	// Fields
+	private  int      idx;
+	private  String   menu_id;
+	private  String   title;
+	private  String   content;
+	private  String   writer;
+	private  String   regdate;
+	private  int      hit;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+	   
+	   
 	   

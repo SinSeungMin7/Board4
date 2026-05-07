@@ -24,7 +24,13 @@ public class HomeController {
 		return  "<h2>Test 입니다</h2>";
 	}
 	
-	
+	/*
+	  // 클라이언트 부를떄는 fetch() (fetch()는 json에 특화되어있다)
+	  @RequestMapping("/test2")
+	  @ResponseBody // 서버가 boardList를 json으로 변경해서 내려보낸다 public List<BoardDto>
+	  test2() { List<BoarDto> boardList = boardMapper.gertBoardList(); return
+	  boardList; }
+	 */
 }
 
 

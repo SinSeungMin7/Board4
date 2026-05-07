@@ -8,7 +8,7 @@ import com.green.board.dto.BoardDto;
 import com.green.menus.dto.MenuDTO;
 
 @Mapper
-public interface BoardMapper {
+public interface BoardMapper { // 안터페이스로 만들어진 클래스
 
 	List<BoardDto> getBoardList(MenuDTO menuDto);
 
