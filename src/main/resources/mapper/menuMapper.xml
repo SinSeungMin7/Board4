@@ -30,6 +30,14 @@ namespace="com.green.menus.mapper.MenuMapper" : interface 위치
 	
 	</select> 
 	
+	<!-- menu_id 로 menu_name을 조회 -->
+	<select id="getMenuName">
+	SELECT MENU_NAME
+	FROM   MENUS
+	WHERE  MENU_ID = #{ menu_id }
+	
+	</select>
+	
 	<!-- 메뉴 추가 -->
 	<insert  id="insertMenu">
 	

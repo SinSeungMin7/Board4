@@ -16,6 +16,12 @@ public interface BoardMapper { // 안터페이스로 만들어진 클래스
 
 	void incHit(BoardDto boardDto);
 
+	void insertBoard(BoardDto boardDto);
+
+	void deleteBoard(BoardDto boardDto);
+
+	void updateBoard(BoardDto boardDto);
+
 
 	
 	

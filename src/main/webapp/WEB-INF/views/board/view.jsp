@@ -65,22 +65,25 @@
   	}
   
   }
-  #table1 tr:last-of-type > td {
+  
+  #table1  tr:last-of-type > td {
       background: white;
       border : 1px solid black; 
-  }
-  
-  #table1 tr:nth-of-type(3) td:nth-of-type(2){
- 	  text-align: left;
   }  
-  
-  #table1 tr:nth-of-type(4) {
-  	  height:400px;
+  #table1  tr:nth-of-type(3) td:nth-of-type(2) { 
+      text-align: left;
+  }
+  #table1  tr:nth-of-type(4) {
+      height: 400px;
+      td:nth-of-type(2) {
+      	text-align:left;
+      	vertical-align: baseline;
+      }
   }
   
 </style>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
 <body> 
   <main>
@@ -111,9 +114,9 @@
       
       <tr>
         <td colspan="4">
-        	<a href="/Board/WriteForm" class="btn btn-primary">새글쓰기</a> <!-- https://getbootstrap.kr/docs/5.2/components/buttons/ 여기서 들고옴 스타일 -->
-        	<a href="/Board/UpdateForm?idx=${board.idx}"class="btn btn-outline-warning">수정</a>
-        	<a href="/Board?delete?idx=${board.idx }"class="btn btn-outline-danger">삭제</a>
+        	<a href="/Board/WriteForm?menu_id=${board.menu_id}" class="btn btn-primary">새글쓰기</a> <!-- https://getbootstrap.kr/docs/5.2/components/buttons/ 여기서 들고옴 스타일 -->
+        	<a href="/Board/UpdateForm?idx=${board.idx}&menu_id=${board.menu_id}"class="btn btn-outline-warning">수정</a>
+        	<a href="/Board/delete?idx=${board.idx }&menu_id=${board.menu_id}"class="btn btn-outline-danger">삭제</a>
         	<a href="/Board/List?menu_id=${board.menu_id}"class="btn btn-info">목록</a>
         	<a href="/"class="btn btn-success">HOME</a>
         </td>
