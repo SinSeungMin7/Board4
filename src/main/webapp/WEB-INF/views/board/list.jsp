@@ -9,9 +9,9 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="shortcut icon" href="/img/favicon2.png" type="image/x-icon">
-<link href="/css/common.css" rel="stylesheet" />
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link href="/css/common.css" rel="stylesheet" />
 
 <style>
    table { width:100%;  }
@@ -56,7 +56,7 @@
 	<main>
 	  <%@include file="/WEB-INF/include/menus.jsp" %> 
 	
-	  <h2>${menu.menu_name} 게시물 목록</h2>
+	  <h2 class="h2">${menu.menu_name} 게시물 목록</h2>
 	  <table id="list" class="table  table-hover">
 	    <tr>
 	      <td>번호</td>

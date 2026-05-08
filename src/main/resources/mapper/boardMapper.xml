@@ -60,15 +60,15 @@
 	</insert>
 	
 	<delete id="deleteBoard">
-	DELETE FROM board
+	DELETE 
+	FROM   BOARD
 	WHERE  IDX = #{idx}
 	</delete>
 	
 	<update id="updateBoard">
 	UPDATE BOARD
 	SET    TITLE   = #{title}, 
-	       CONTENT = #{content},
-	       WRITER  = #{writer}
+	       CONTENT = #{content}
 	WHERE  IDX     = #{idx}
 	</update>
 	

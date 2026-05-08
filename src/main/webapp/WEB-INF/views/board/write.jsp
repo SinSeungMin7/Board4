@@ -70,7 +70,7 @@
         <td colspan="2">
           <input type="submit"  value="추가" />
           <input type="button"  value="목록" 
-            onclick="location.href='/Users/List'"
+            onclick="location.href='/Board/List?menu_id=${menu_id}'"
           />        
         </td>
       </tr>
