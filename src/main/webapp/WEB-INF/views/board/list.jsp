@@ -56,7 +56,7 @@
 	<main>
 	  <%@include file="/WEB-INF/include/menus.jsp" %> 
 	
-	  <h2>${menu.menu_name}게시물 목록</h2>
+	  <h2>${menu.menu_name} 게시물 목록</h2>
 	  <table id="list" class="table  table-hover">
 	    <tr>
 	      <td>번호</td>
@@ -67,16 +67,16 @@
 	    </tr>
 	    <tr>
 	      <td  colspan="5">
-	       [<a href="/Board/WriteForm?menu_id=${ menu_id }">새 글 등록</a>]&nbsp;&nbsp;&nbsp; 
+	       [<a href="/Board/WriteForm?menu_id=${menu_id }">새 글 등록</a>]&nbsp;&nbsp;&nbsp; 
 	       [<a href="/">Home</a>] 
 	      </td>
 	    </tr>
 	    
-	    <c:forEach  var="board"  items="${ bList }">
+	    <c:forEach  var="board"  items="${bList}">
 	    <tr>
 	      <td> ${  board.idx      }  </td>    <!-- menu.getMenu_id() -->
 	      <td class="title"> 
-	        <a href ="/Board/View?idx=${board.idx}">
+	        <a href ="/Board/View?idx=${board.idx}&menu_id=${menu_id}">
 	        ${ board.title    }
 	        </a>  
 	      </td>

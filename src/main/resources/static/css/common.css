@@ -31,7 +31,7 @@
 	   	       color:white;
 	   	       padding: 10px;
 	   	       background-color: black ;
-		   	   &:hover {
+		   	   &:hover, &.active {
 		   	       text-decoration  : none;
 		   	   	   background-color : #04AA6D;
 		   	   	   color            : white; 
@@ -39,7 +39,6 @@
 	   	   }
    	   }
    }
-   		   	   .menu td >.${ board.menu_id } { background-color : #04AA6D; }
    
    
    
